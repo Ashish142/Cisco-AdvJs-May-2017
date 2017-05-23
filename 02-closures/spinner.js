@@ -19,10 +19,33 @@ spinner.down(); //=> -1
 The varible used the track the value should NOT be accessible from outside the spinner object
 */
 
+//Revealing Module Pattern
+function spinnerFactory(){
+	//state
+	var counter = 0;
 
-var emp = {
-	name : 'magesh',
-	print : function(){
-		console.log('my name is ', this.name);
+	//behaviours
+	function increment(){
+		return ++counter;
 	}
+
+	function decrement(){
+		return --counter;
+	}
+
+	return {
+		up : increment,
+		down : decrement
+	};
 }
+
+var spinner = spinnerFactory();
+
+
+
+
+
+
+
+
+
