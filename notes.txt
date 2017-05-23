@@ -190,12 +190,24 @@ Invocation patterns in JavaScript (6 ways)
 4. using 'apply()' method of the function
 	fn.apply(thisContext, [arg1, arg2, arg3]);
 
+5. Immediately Invoked Function Expression - IIFE
 
 
+Closure Steps
+	Step : 1
+		Create an outer function
 
+	Step : 2
+		Define a variable in the outer function
 
+	Step : 3	
+		Create an inner function
 
+	Step : 4
+		The variable of the outer function is used in the inner function
 
+	Step : 5
+		The life time of the inner function is extended beyond the lifetime of the outer function
 
 
 
