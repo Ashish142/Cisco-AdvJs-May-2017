@@ -1,0 +1,212 @@
+Infrastructure
+	32GB RAM
+	Quad Core Processors
+
+Browsers
+	- HTTP Client
+	- HTML Renderer
+
+	- Virtual OS (HTML5)
+		* Data Storage
+			- LocalStorage
+			- Session Storage
+			- Indexed DB
+		* File System Access
+			- API
+		* Multi Threading
+			- Web Workers
+		* Sockets
+			- Web Sockets
+			- Server Sent Events
+			- WebRTC
+		* Host
+			- Offline Application Cache
+			- Service Workers
+		* Device Access
+			- APIs
+
+
+Data Types
+	- number
+	- string
+	- boolean
+	- undefined
+	- object
+	- function
+
+Constructs
+	- var
+	- if else elseif
+	- switch case
+	- for
+	- while
+	- try / catch
+	- function
+
+APIs
+	- Date
+	- Math
+	- Array
+	- RegEx
+
+1. Replace JavaScript
+	- Dart (Google)
+
+2. Compiles to JavaScript
+	- CoffeeScript
+	- TypeScript
+	- Script# (C# to JavaScript)
+
+3. Improve JS
+	- ES5 (ECMAScript 5)
+	- ES6 (Now)
+	- ES7 (Draft)
+
+
+JavaScript
+-----------
+
+
+Procedural
+Object Based
+Object Oriented
+Functional (X)
+	- Functions are first class citizens (data / object)
+
+	- Higher Order Functions
+		* Passes as arguments to other functions
+		* Returned as a return value
+
+	- Creation
+		var fn = function(){}
+		var fn = new Function(/* body */);
+
+	- Have Attributes
+	- Have Methods
+
+
+Static
+Dynamic (X)
+
+Strongly Typed
+Loosely Typed (X)
+
+
+
+class Employee{
+	public int id;
+	public string name;
+	public short salary;
+}
+
+var emp = new Employee();
+emp.id = 100;
+emp.name = 'Magesh'
+emp.salary = 10000
+
+emp.city = 'Bangalore'
+
+
+int x = 100;
+
+x = 'abc'
+
+var x = 100
+
+x = 'abc'
+
+
+$(document).ready(fn)  -> DOM Node
+$([dn1, dn2])
+$('selector')
+$(fn)
+$($)
+$([] of anything)
+
+
+
+class Calculator{
+	public int add (int x , int y){
+		return x + y;
+	}
+}
+
+
+function add ( x ,  y){
+	return x + y;
+}
+
+add(10,20)
+
+add(10,"20")
+
+add(10,"abc")
+add(fn1, fn2)
+add([10,20], [30,40])
+add(10)
+add()
+add(10,20,30,40)
+
+1. 
+function add ( x ,  y){
+	if (typeof x !== 'number' || typeof y !== number)
+		throw new Error('Invalid arguments');
+	return x + y;
+}
+
+
+jasmine
+
+	- describe (test suite)
+
+	- it (test case)
+		Arrang / Act / Assert
+
+	- expect (Assertion)
+		- matchers
+
+
+- this (x)
+- arguments
+	- array like object having all the values passed to the function as arguments
+
+	- arguments.length 
+	- arguments[0]
+
+It doesn't matter where the function is or who owns the function
+What matters is 'how the function is invoked'
+
+Invocation patterns in JavaScript (6 ways)
+==================================
+1. as a method of an object (emp)
+	this -> object (emp)
+
+2. as a function
+	this -> global (window in browser)
+
+3. using 'call()' method of the function
+	fn.call(thisContext, arg1, arg2, arg3);
+
+4. using 'apply()' method of the function
+	fn.apply(thisContext, [arg1, arg2, arg3]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
