@@ -117,10 +117,44 @@ describe('Sort', function(){
 });
 
 describe('Filter', function(){
-	describe('All costly products', function(){
-		//filter()
-		console.table(products);
+	function filter(list, criteria){
+		var result = [];
+		for(var index=0; index < list.length; index++)
+			if (criteria(list[index]))
+				result.push(list[index]);
+		return result;
+	}
+
+	describe("Filtering by Cost", function(){
+		var isCostly = function(product){
+			return product.cost > 50;
+		};
+		describe('All costly products [cost > 50]', function(){
+			var costlyProducts = filter(products, isCostly);
+			console.table(costlyProducts);
+		});
+	})
+
+	describe('Filtering by category', function(){
+		var isStationary = function(product){
+			return product.category === 'stationary';
+		};
+
+		describe('All stationary products', function(){
+			var stationaryProducts = filter(products, isStationary);
+			console.table(stationaryProducts);
+		});
 	});
+
+	describe("Filtering by units", function(){
+		var isUnderStocked = function(product){
+			return product.units <= 20;
+		};
+		describe('All under stocked products [ units <= 20 ]', function(){
+			var underStockedProducts = filter(products, isUnderStocked);
+			console.table(underStockedProducts);
+		});
+	})
 });
 
 
