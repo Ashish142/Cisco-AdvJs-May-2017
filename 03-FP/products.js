@@ -26,10 +26,6 @@ function describe(title, fn){
 	console.groupEnd();
 }
 
-
-
-
-
 describe('Default List', function(){
 	console.table(products);
 });
@@ -190,6 +186,39 @@ describe('Filter', function(){
 	});
 });
 
+describe('GroupBy', function(){
+	function groupBy(list, keySelector){
+		var result = {};
+		for(var index=0; index < list.length; index++){
+			var key = keySelector(list[index]);
+			if (typeof result[key] === 'undefined')
+				result[key] = [];
+			result[key].push(list[index]);
+		}
+		return result;
+	}
+	function printGroup(groupedObj){
+		for(var key in groupedObj)
+			describe('Key - [' + key + ']', function(){
+				console.table(groupedObj[key]);
+			});
+	}
+	describe("Products by category", function(){
+		var categoryKeySelector = function(product){
+			return product.category;
+		};
+		var productsByCategory = groupBy(products, categoryKeySelector);
+		printGroup(productsByCategory);
+	});
+
+	describe("Products by cost", function(){
+		var costKeySelector = function(product){
+			return product.cost > 50 ? 'costly' : 'affordable';
+		};
+		var productsByCost = groupBy(products, costKeySelector);
+		printGroup(productsByCost);
+	});
+});
 
 
 
