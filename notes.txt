@@ -210,17 +210,50 @@ Closure Steps
 		The life time of the inner function is extended beyond the lifetime of the outer function
 
 
+Classes
+	- No special construct (as of ES5) for classes
+	- Functions can act like classes
+
+	- Functions that behave like classes are called as 'Constructor Functions'
+		* A constructor function is invoked with 'new'
+			new Date(), new Array()
+
+			a) this -> new a object
+			b) this -> newly create object -> is returned by default
 
 
 
+Inheritance
+	- Prototypal Inheritance
+		-Inherit one/more object(s) from another object
 
 
+	- "Prototype Hopping"
+		* only when an attribute is 'READ'
 
 
+ES6
+	Transpilers
+		-Babel (Node Module) (nodejs.org)
+		
+		- npm install babel-cli  -g
+
+		-npm init -y (creates the package.json)
+		-npm install babel-cli babel-preset-env --save-dev
+
+	Features
+		- let, const
+		- Arrow Functions
+		- Default arguments
+		- Object Destructuring
+		- Array Destructuring
+		- Rest Operator
+		- Spread Operator
+		- Template Syntax (string)
+
+		- http://es-features.org
 
 
-
-
-
-
+http://bit.ly/javascript-training-videos
+"Secrets of JavaScript Ninja" - book 
 
